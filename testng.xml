@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name = "browserName" value = "Chrome"/>
+	<parameter name = "url" value = "https://facebook.com"/>
+	<test name="FBLogin">
+		<classes>
+			<class name="com.pack.testng.examples.ParametersTest">
+				<methods>
+					<include name="LaunchApp" />
+					<include name="EnterLoginDetails" />
+					<include name="NavigateToMyInfo"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="FBLoginViaEdge">
+	<parameter name = "browserName" value = "Edge"/>
+	<parameter name = "url" value = "https://facebook.com"/>
+		<classes>
+			<class name="com.pack.testng.examples.ParametersTest">
+				<methods>
+					<include name="LaunchApp" />
+					<include name="EnterLoginDetails" />
+					<include name="NavigateToMyInfo"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+
+
